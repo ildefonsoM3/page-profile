@@ -9,25 +9,26 @@ body {
 }
 
 section {
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card {
-
-    width: 250px;
-    min-height: 250px;
-    background: white;
-    margin: 70px auto;
+    width: 300px;
+    min-height: 420px;
+    background-color: #fff;
+    margin: 0 auto;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.24);
     background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
     background-size: 100% 150px;
     background-repeat: no-repeat;
     text-align: center;
-    padding: 0.1px;
 }
 
 .card__person {
@@ -37,12 +38,48 @@ section {
     border: 5px solid white;
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    margin: 105px auto;
+    margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
 }
 
 .card__name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
+.card__follow {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: 100% 100%;
+    justify-content: space-evenly;
+}
+
+span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.followers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.following {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    padding-top: 13px;
+    justify-content: end;
+    align-items: end;
+    font-size: 1.9rem;
+    background-color: #025395;
+    color: white;
 }
